@@ -1,0 +1,15 @@
+@use '../resources/variables';
+@use '../resources/mixins';
+
+section{
+    article{
+        div{
+            @include mixins.flex-default(12px);
+            p{
+                @include mixins.font(normal, 18px, variables.$color-zinc-100);
+                @include mixins.box-reset();
+                text-align: justify;
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+@use '../resources/variables';
+@use '../resources/mixins';
+
+#projects{
+    .card{
+        p{
+            margin-top: 8px;
+            margin-bottom: 0px;
+            @include mixins.font(normal, 16px, variables.$color-zinc-100);
+        }
+        .links{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            .button{
+                cursor: pointer;
+                letter-spacing: 0.5px;
+                padding: 8px 16px;
+                border-radius: 8px;
+                background-color: variables.$color-zinc-800;
+                text-decoration: none;
+                @include mixins.font(normal, 18px, variables.$color-zinc-100);
+                transition: all 500ms ease;
+                &:hover{
+                    background-color: variables.$color-green-500;
+                    color: variables.$color-zinc-800;
+                }
+            }
+            .link{
+                @include mixins.underline-link();
+                @include mixins.font(normal, 18px, variables.$color-zinc-100);
+                @include mixins.hover-default();
+            }
+        }
+    }
+    span{
+        align-self: center;
+        margin-top: 40px;
+        a{
+            @include mixins.underline-link();
+            @include mixins.font(normal, 20px, variables.$color-zinc-100);
+            @include mixins.hover-default();
+        }
+    }
+}

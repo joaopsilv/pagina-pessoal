@@ -1,0 +1,47 @@
+@use '../resources/variables';
+@use '../resources/mixins';
+
+#subjects, #projects{
+    @include mixins.flex-default(0px);
+    p{
+        @include mixins.box-reset();
+        @include mixins.font(normal, 18px, variables.$color-zinc-100);
+        margin-bottom: 20px;
+    }
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    .card{
+        @include mixins.flex-default(16px);
+        padding: 28px;
+        border-radius: 12px;
+        border: solid 2px variables.$color-zinc-800;
+        background-color: #27272a45;
+        transition: variables.$transition-default;
+        h3{
+            @include mixins.box-reset();
+            @include mixins.font(bold, 20px, variables.$color-zinc-100);
+        }
+        ul{
+            @include mixins.box-reset(true);
+            @include mixins.list-reset();
+            gap: 8px;
+            li{
+                @include mixins.li-tag();
+                @include mixins.font(normal, 16px, variables.$color-zinc-100);
+            }
+        }
+        &:hover{
+            border: solid 2px variables.$color-green-500;
+        }
+    }
+}
+
+#subjects{
+    ul{
+        flex-direction: column;
+    }
+}

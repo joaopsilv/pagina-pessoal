@@ -1,0 +1,66 @@
+@use '../resources/variables';
+@use '../resources/mixins';
+
+aside{
+    padding: 32px;
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    display: grid;
+    row-gap: 28px;
+    grid-template-rows: repeat(4, auto) 1fr;
+    background-color: variables.$color-zinc-950;
+    .personal-infos{
+        @include mixins.flex-default(8px);
+        align-items: center;
+        .profile-image{
+            display: flex;
+            justify-content: center;
+            img{
+                width: 200px;
+                height: 200px;
+                border: solid 4px variables.$color-green-500;
+                border-radius: 50%;
+            }
+        }
+        h3{
+            @include mixins.font(bold, 20px, variables.$color-zinc-100);
+            @include mixins.box-reset();
+        }
+        span{
+            @include mixins.font(normal, 16px, variables.$color-zinc-100);
+        }
+    }
+    .technological-infos{
+        h3{
+            @include mixins.font(bold, 20px, variables.$color-zinc-100);
+            @include mixins.box-reset();
+            margin-bottom: 8px;
+        }
+        ul{
+            @include mixins.box-reset(true);
+            @include mixins.list-reset();
+            flex-direction: column;
+            gap: 4px;
+            @include mixins.font(normal, 16px, variables.$color-zinc-100);
+            i{
+                width: 8%;
+            }
+        }
+    }
+    .contacts-infos{
+        @include mixins.flex-default(8px);
+        a{
+            @include mixins.hover-default();
+            @include mixins.font(normal, 16px, variables.$color-zinc-100);
+            text-decoration: none;
+            i{
+                width: 8%;
+            }
+        }
+    }
+    .line{
+        border: solid 1px variables.$color-zinc-800;
+        width: 100%;
+    }
+}

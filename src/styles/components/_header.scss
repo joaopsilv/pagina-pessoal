@@ -1,0 +1,29 @@
+@use '../resources/variables';
+@use '../resources/mixins';
+
+header{
+    @include mixins.padding-default();
+    margin-bottom: 16px;
+    nav{
+        padding-bottom: 24px;
+        padding-top: 24px;
+        border-bottom: solid 2px variables.$color-zinc-800;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span{
+            @include mixins.font(normal, 20px, variables.$color-zinc-100);
+            @include mixins.hover-default();
+        }
+        ul{
+            @include mixins.list-reset();
+            @include mixins.box-reset(true);
+            gap: 40px;
+            a{
+                @include mixins.font(normal, 18px, variables.$color-zinc-100);
+                @include mixins.hover-default();
+                text-decoration: none;
+            }
+        }
+    }
+}

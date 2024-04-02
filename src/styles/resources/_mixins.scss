@@ -1,0 +1,54 @@
+@use './variables';
+
+@mixin font($weight, $size, $color){
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin padding-default(){
+    padding-right: 160px;
+    padding-left: 80px;
+}
+
+@mixin box-reset($padding: false){
+    margin: 0;
+    @if $padding{
+        padding: 0;
+    }
+}
+
+@mixin list-reset(){
+    display: flex;
+    list-style: none;
+}
+
+@mixin flex-default($gap){
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
+@mixin li-tag(){
+    width: fit-content;
+    padding: 4px 12px;
+    border-radius: 16px;
+    background-color: variables.$color-zinc-800;
+}
+
+@mixin underline-link(){
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 2px solid variables.$color-zinc-100;
+    transition: variables.$transition-default;
+    &:hover{
+        border-color: variables.$color-green-500;
+    }
+}
+
+@mixin hover-default(){
+    transition: variables.$transition-default;
+    &:hover{
+        color: variables.$color-green-500;
+    }
+}

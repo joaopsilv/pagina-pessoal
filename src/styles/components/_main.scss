@@ -1,0 +1,7 @@
+@use '../resources/mixins';
+@use './title';
+
+main{
+    @include mixins.padding-default();
+    @include mixins.flex-default(16px);
+}   
