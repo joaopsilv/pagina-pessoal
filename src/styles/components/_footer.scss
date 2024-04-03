@@ -2,7 +2,7 @@
 @use '../resources/mixins';
 
 footer{
-    @include mixins.padding-default();
+    @include mixins.padding-default(160px, 80px);
     margin-top: 52px;
     address{
         padding-bottom: 24px;
@@ -27,5 +27,17 @@ footer{
                 @include mixins.hover-default();
             }
         }
+    }
+}
+
+@media only screen and (max-width: variables.$breakpoint-large-laptop){
+    footer{
+        @include mixins.padding-default(80px, 80px);
+    }
+}
+
+@media only screen and (max-width: variables.$breakpoint-small-laptop){
+    footer{
+        display: none;
     }
 }

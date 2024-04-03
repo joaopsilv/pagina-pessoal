@@ -1,7 +1,20 @@
+@use '../resources/variables';
 @use '../resources/mixins';
 @use './title';
 
 main{
-    @include mixins.padding-default();
+    @include mixins.padding-default(160px, 80px);
     @include mixins.flex-default(16px);
-}   
+}
+
+@media only screen and (max-width: variables.$breakpoint-large-laptop){
+    main{
+        @include mixins.padding-default(80px, 80px);
+    }
+}
+
+@media only screen and (max-width: variables.$breakpoint-small-laptop){
+    main{
+        @include mixins.padding-default(60px, 60px);
+    }
+}

@@ -2,7 +2,7 @@
 @use '../resources/mixins';
 
 header{
-    @include mixins.padding-default();
+    @include mixins.padding-default(160px, 80px);
     margin-bottom: 16px;
     nav{
         padding-bottom: 24px;
@@ -23,6 +23,28 @@ header{
                 @include mixins.font(normal, 18px, variables.$color-zinc-100);
                 @include mixins.hover-default();
                 text-decoration: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: variables.$breakpoint-large-laptop){
+    header{
+        @include mixins.padding-default(80px, 80px);
+    }
+}
+
+@media only screen and (max-width: variables.$breakpoint-small-laptop){
+    header{
+        @include mixins.padding-default(60px, 60px);
+        nav{
+            justify-content: center;
+            span{
+                display: none;
+            }
+            ul{
+                width: 100%;
+                justify-content: space-between;
             }
         }
     }

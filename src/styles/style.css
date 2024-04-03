@@ -98,6 +98,28 @@ header nav ul a:hover {
   color: #00df5e;
 }
 
+@media only screen and (max-width: 1440px) {
+  header {
+    padding-right: 80px;
+    padding-left: 80px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  header {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  header nav {
+    justify-content: center;
+  }
+  header nav span {
+    display: none;
+  }
+  header nav ul {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
 aside {
   padding: 32px;
   position: fixed;
@@ -199,6 +221,18 @@ main {
   gap: 16px;
 }
 
+@media only screen and (max-width: 1440px) {
+  main {
+    padding-right: 80px;
+    padding-left: 80px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  main {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}
 section article div {
   display: flex;
   flex-direction: column;
@@ -267,6 +301,11 @@ section article div p {
   border: solid 2px #00df5e;
 }
 
+@media only screen and (max-width: 1440px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
 #subjects ul {
   flex-direction: column;
 }
@@ -336,6 +375,11 @@ section article div p {
   color: #00df5e;
 }
 
+@media only screen and (max-width: 1024px) {
+  #projects span {
+    margin-bottom: 52px;
+  }
+}
 footer {
   padding-right: 160px;
   padding-left: 80px;
@@ -374,4 +418,16 @@ footer address p span {
 }
 footer address p span:hover {
   color: #00df5e;
+}
+
+@media only screen and (max-width: 1440px) {
+  footer {
+    padding-right: 80px;
+    padding-left: 80px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  footer {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

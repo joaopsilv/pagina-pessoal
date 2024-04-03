@@ -6,9 +6,9 @@
     font-weight: $weight;
 }
 
-@mixin padding-default(){
-    padding-right: 160px;
-    padding-left: 80px;
+@mixin padding-default($right, $left){
+    padding-right: $right;
+    padding-left: $left;
 }
 
 @mixin box-reset($padding: false){
