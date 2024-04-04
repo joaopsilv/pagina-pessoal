@@ -38,6 +38,20 @@ footer{
 
 @media only screen and (max-width: variables.$breakpoint-small-laptop){
     footer{
-        display: none;
+        address{
+            justify-content: flex-end;
+            .contacts{
+                flex-direction: row-reverse;
+            }
+            p{
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: variables.$breakpoint-tablet){
+    footer{
+        @include mixins.padding-default(40px, 40px);
     }
 }

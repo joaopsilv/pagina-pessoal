@@ -58,3 +58,9 @@ aside{
         width: 100%;
     }
 }
+
+@media only screen and (max-width: variables.$breakpoint-tablet){
+    aside{
+        display: none;
+    }
+}

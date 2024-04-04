@@ -15,7 +15,7 @@ body {
   display: grid;
   grid-template-areas: "aside header" "aside main" "aside footer";
   grid-template-columns: 360px 1fr;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: repeat(3, auto);
   min-height: 100vh;
   background-color: #18181b;
   font-family: "DM Sans", sans-serif;
@@ -58,6 +58,13 @@ body::-webkit-scrollbar-thumb {
   background-color: rgba(74, 222, 128, 0.6705882353);
 }
 
+@media only screen and (max-width: 768px) {
+  body {
+    grid-template-areas: "header" "main" "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+}
 header {
   padding-right: 160px;
   padding-left: 80px;
@@ -118,6 +125,12 @@ header nav ul a:hover {
   header nav ul {
     width: 100%;
     justify-content: space-between;
+  }
+}
+@media only screen and (max-width: 768px) {
+  header {
+    padding-right: 40px;
+    padding-left: 40px;
   }
 }
 aside {
@@ -191,6 +204,11 @@ aside .line {
   width: 100%;
 }
 
+@media only screen and (max-width: 768px) {
+  aside {
+    display: none;
+  }
+}
 .section-title {
   color: #f4f4f5;
   font-size: 36px;
@@ -228,6 +246,12 @@ main {
   main {
     padding-right: 60px;
     padding-left: 60px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main {
+    padding-right: 40px;
+    padding-left: 40px;
   }
 }
 section article div {
@@ -366,11 +390,6 @@ section article div p {
   color: #00df5e;
 }
 
-@media only screen and (max-width: 1024px) {
-  #projects span {
-    margin-bottom: 52px;
-  }
-}
 footer {
   padding-right: 160px;
   padding-left: 80px;
@@ -418,7 +437,19 @@ footer address p span:hover {
   }
 }
 @media only screen and (max-width: 1024px) {
-  footer {
+  footer address {
+    justify-content: flex-end;
+  }
+  footer address .contacts {
+    flex-direction: row-reverse;
+  }
+  footer address p {
     display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  footer {
+    padding-right: 40px;
+    padding-left: 40px;
   }
 }/*# sourceMappingURL=style.css.map */

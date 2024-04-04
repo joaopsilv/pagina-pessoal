@@ -19,3 +19,9 @@ main{
         @include mixins.padding-default(60px, 60px);
     }
 }
+
+@media only screen and (max-width: variables.$breakpoint-tablet){
+    main{
+        @include mixins.padding-default(40px, 40px);
+    }
+}
