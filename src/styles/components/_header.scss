@@ -55,3 +55,9 @@ header{
         @include mixins.padding-default(40px, 40px);
     }
 }
+
+@media only screen and (max-width: variables.$breakpoint-cellphone){
+    header{
+        display: none;
+    }
+}

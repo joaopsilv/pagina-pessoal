@@ -55,3 +55,10 @@ footer{
         @include mixins.padding-default(40px, 40px);
     }
 }
+
+@media only screen and (max-width: variables.$breakpoint-cellphone){
+    footer{
+        margin-top: 48px;
+        @include mixins.padding-default(32px, 32px);
+    }
+}

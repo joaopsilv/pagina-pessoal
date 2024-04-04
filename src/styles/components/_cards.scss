@@ -42,6 +42,18 @@
     }
 }
 
+@media only screen and (max-width: variables.$breakpoint-tablet){
+    .cards{
+        gap: 32px;
+    }
+}
+
+@media only screen and (max-width: variables.$breakpoint-cellphone){
+    .cards{
+        gap: 20px;
+    }
+}
+
 #subjects{
     ul{
         flex-direction: column;

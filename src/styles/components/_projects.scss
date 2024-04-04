@@ -43,3 +43,19 @@
         }
     }
 }
+
+@media only screen and (max-width: variables.$breakpoint-tablet){
+    #projects{
+        span{
+            margin-top: 32px;
+        }
+    }
+}
+
+@media only screen and (max-width: variables.$breakpoint-cellphone){
+    #projects{
+        span{
+            margin-top: 20px;
+        }
+    }
+}

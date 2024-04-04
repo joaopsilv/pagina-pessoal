@@ -133,6 +133,11 @@ header nav ul a:hover {
     padding-left: 40px;
   }
 }
+@media only screen and (max-width: 535px) {
+  header {
+    display: none;
+  }
+}
 aside {
   padding: 32px;
   position: fixed;
@@ -254,6 +259,13 @@ main {
     padding-left: 40px;
   }
 }
+@media only screen and (max-width: 535px) {
+  main {
+    padding-right: 32px;
+    padding-left: 32px;
+    gap: 8px;
+  }
+}
 section article div {
   display: flex;
   flex-direction: column;
@@ -319,6 +331,16 @@ section article div p {
 @media only screen and (max-width: 1440px) {
   .cards {
     grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .cards {
+    gap: 32px;
+  }
+}
+@media only screen and (max-width: 535px) {
+  .cards {
+    gap: 20px;
   }
 }
 #subjects ul {
@@ -390,6 +412,16 @@ section article div p {
   color: #00df5e;
 }
 
+@media only screen and (max-width: 768px) {
+  #projects span {
+    margin-top: 32px;
+  }
+}
+@media only screen and (max-width: 535px) {
+  #projects span {
+    margin-top: 20px;
+  }
+}
 footer {
   padding-right: 160px;
   padding-left: 80px;
@@ -451,5 +483,12 @@ footer address p span:hover {
   footer {
     padding-right: 40px;
     padding-left: 40px;
+  }
+}
+@media only screen and (max-width: 535px) {
+  footer {
+    margin-top: 48px;
+    padding-right: 32px;
+    padding-left: 32px;
   }
 }/*# sourceMappingURL=style.css.map */
