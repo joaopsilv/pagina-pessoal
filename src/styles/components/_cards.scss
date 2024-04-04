@@ -20,11 +20,7 @@
         border-radius: 12px;
         border: solid 2px variables.$color-zinc-800;
         background-color: #27272a45;
-        transition: variables.$transition-default;
-        h3{
-            @include mixins.box-reset();
-            @include mixins.font(bold, 20px, variables.$color-zinc-100);
-        }
+        transition: variables.$transition-default;  
         ul{
             @include mixins.box-reset(true);
             @include mixins.list-reset();

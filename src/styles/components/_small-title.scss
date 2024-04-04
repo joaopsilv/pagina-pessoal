@@ -1,0 +1,7 @@
+@use '../resources/variables';
+@use '../resources/mixins';
+
+.small-title{
+    @include mixins.font(bold, 20px, variables.$color-zinc-100);
+    @include mixins.box-reset();
+}

@@ -23,18 +23,12 @@ aside{
                 border-radius: 50%;
             }
         }
-        h3{
-            @include mixins.font(bold, 20px, variables.$color-zinc-100);
-            @include mixins.box-reset();
-        }
         span{
             @include mixins.font(normal, 16px, variables.$color-zinc-100);
         }
     }
     .technological-infos{
         h3{
-            @include mixins.font(bold, 20px, variables.$color-zinc-100);
-            @include mixins.box-reset();
             margin-bottom: 8px;
         }
         ul{

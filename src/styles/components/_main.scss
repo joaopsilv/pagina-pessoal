@@ -1,6 +1,7 @@
 @use '../resources/variables';
 @use '../resources/mixins';
 @use './title';
+@use './small-title';
 
 main{
     @include mixins.padding-default(160px, 80px);
