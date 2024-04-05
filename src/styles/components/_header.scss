@@ -3,7 +3,7 @@
 
 header{
     @include mixins.padding-default(160px, 80px);
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     nav{
         padding-bottom: 24px;
         padding-top: 24px;
@@ -14,6 +14,12 @@ header{
         span{
             @include mixins.font(normal, 20px, variables.$color-zinc-100);
             @include mixins.hover-default();
+        }
+        p{
+            @include mixins.font(normal, 18px, variables.$color-zinc-100);
+            @include mixins.box-reset();
+            @include mixins.hover-default();
+            display: none;
         }
         ul{
             @include mixins.list-reset();
@@ -53,11 +59,24 @@ header{
 @media only screen and (max-width: variables.$breakpoint-tablet){
     header{
         @include mixins.padding-default(40px, 40px);
+        nav{
+            justify-content: flex-end;
+            ul{
+                display: none
+            }
+            p{
+                display: block
+            }
+        }
     }
 }
 
 @media only screen and (max-width: variables.$breakpoint-cellphone){
     header{
-        display: none;
+        margin-bottom: 8px;
+        @include mixins.padding-default(32px, 32px);
+        nav{
+            justify-content: center;
+        }
     }
 }

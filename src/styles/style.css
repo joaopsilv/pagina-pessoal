@@ -68,7 +68,7 @@ body::-webkit-scrollbar-thumb {
 header {
   padding-right: 160px;
   padding-left: 80px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 header nav {
   padding-bottom: 24px;
@@ -85,6 +85,17 @@ header nav span {
   transition: all 320ms ease;
 }
 header nav span:hover {
+  color: #00df5e;
+}
+header nav p {
+  color: #f4f4f5;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0;
+  transition: all 320ms ease;
+  display: none;
+}
+header nav p:hover {
   color: #00df5e;
 }
 header nav ul {
@@ -132,10 +143,24 @@ header nav ul a:hover {
     padding-right: 40px;
     padding-left: 40px;
   }
+  header nav {
+    justify-content: flex-end;
+  }
+  header nav ul {
+    display: none;
+  }
+  header nav p {
+    display: block;
+  }
 }
 @media only screen and (max-width: 535px) {
   header {
-    display: none;
+    margin-bottom: 8px;
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+  header nav {
+    justify-content: center;
   }
 }
 aside {
