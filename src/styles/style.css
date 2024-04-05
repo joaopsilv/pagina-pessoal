@@ -234,6 +234,22 @@ aside .line {
   width: 100%;
 }
 
+@media only screen and (max-height: 716px) {
+  aside {
+    row-gap: 20px;
+  }
+  aside .personal-infos .profile-image img {
+    width: 160px;
+    height: 160px;
+  }
+  aside .technological-infos ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  aside .technological-infos ul i {
+    margin-right: 8px;
+  }
+}
 @media only screen and (max-width: 768px) {
   aside {
     display: none;

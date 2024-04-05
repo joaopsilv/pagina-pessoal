@@ -59,6 +59,29 @@ aside{
     }
 }
 
+@media only screen and (max-height: 716px){
+    aside{
+        row-gap: 20px;
+        .personal-infos{
+            .profile-image{
+                img{
+                    width: 160px;
+                    height: 160px;
+                }
+            }
+        }
+        .technological-infos{
+            ul{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                i{
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: variables.$breakpoint-tablet){
     aside{
         display: none;
