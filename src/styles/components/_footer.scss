@@ -2,12 +2,12 @@
 @use '../resources/mixins';
 
 footer{
-    @include mixins.padding-default(160px, 80px);
-    margin-top: 52px;
+    @include mixins.padding-default(16rem, 8rem);
+    margin-top: 5.2rem;
     address{
-        padding-bottom: 24px;
-        padding-top: 24px;
-        border-top: solid 2px variables.$color-zinc-800;
+        padding-bottom: 2.4rem;
+        padding-top: 2.4rem;
+        border-top: solid 2px variables.$color-dark;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -15,13 +15,13 @@ footer{
             display: flex;
             gap: 16px;
             a{
-                @include mixins.font(bold, 24px, variables.$color-zinc-200);
+                @include mixins.font(bold, 2.4rem, variables.$color-medium);
                 @include mixins.hover-default();
             }
         }
         p{
             @include mixins.box-reset();
-            @include mixins.font(normal, 18px, variables.$color-zinc-100);
+            @include mixins.font(normal, variables.$font-size-normal, variables.$color-light);
             font-style: normal;
             span{
                 @include mixins.hover-default();
@@ -32,7 +32,7 @@ footer{
 
 @media only screen and (max-width: variables.$breakpoint-large-laptop){
     footer{
-        @include mixins.padding-default(80px, 80px);
+        @include mixins.padding-default(8rem, 8rem);
     }
 }
 
@@ -52,13 +52,13 @@ footer{
 
 @media only screen and (max-width: variables.$breakpoint-tablet){
     footer{
-        @include mixins.padding-default(40px, 40px);
+        @include mixins.padding-default(4rem, 4rem);
     }
 }
 
 @media only screen and (max-width: variables.$breakpoint-cellphone){
     footer{
-        margin-top: 48px;
-        @include mixins.padding-default(32px, 32px);
+        margin-top: 4.8rem;
+        @include mixins.padding-default(3.2rem, 3.2rem);
     }
 }

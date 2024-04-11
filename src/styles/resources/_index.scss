@@ -6,10 +6,10 @@ body{
     "aside header"
     "aside main"
     "aside footer";
-    grid-template-columns: 360px 1fr;
+    grid-template-columns: 36rem 1fr;
     grid-template-rows: repeat(3, auto);
     min-height: 100vh;
-    background-color: variables.$color-zinc-900;
+    background-color: variables.$color-body;
     font-family: 'DM Sans', sans-serif;
 }
 
@@ -34,16 +34,16 @@ body::-webkit-scrollbar{
 }
   
 body::-webkit-scrollbar-track{
-    background: variables.$color-zinc-800
+    background: variables.$color-dark;
 }
   
 body::-webkit-scrollbar-thumb{
-    background-color: variables.$color-green-500;
-    border-radius: 20px;
+    background-color: variables.$color-emphasis;
+    border-radius: 2rem;
 }
 
 ::selection{
-    background-color: #4ade80ab;
+    background-color: variables.$color-select;
 }
 
 @media only screen and (max-width: variables.$breakpoint-tablet){

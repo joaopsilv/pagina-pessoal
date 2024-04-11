@@ -31,24 +31,24 @@
 
 @mixin li-tag(){
     width: fit-content;
-    padding: 4px 12px;
-    border-radius: 16px;
-    background-color: variables.$color-zinc-800;
+    padding: 0.4rem 1.2rem;
+    border-radius: 1.6rem;
+    background-color: variables.$color-dark
 }
 
 @mixin underline-link(){
     cursor: pointer;
     text-decoration: none;
-    border-bottom: 2px solid variables.$color-zinc-100;
+    border-bottom: 2px solid variables.$color-light;
     transition: variables.$transition-default;
     &:hover{
-        border-color: variables.$color-green-500;
+        border-color: variables.$color-emphasis;
     }
 }
 
 @mixin hover-default(){
     transition: variables.$transition-default;
     &:hover{
-        color: variables.$color-green-500;
+        color: variables.$color-emphasis;
     }
 }

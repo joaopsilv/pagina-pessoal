@@ -2,51 +2,51 @@
 @use '../resources/mixins';
 
 aside{
-    padding: 32px;
+    padding: 3.2rem;
     position: fixed;
-    width: 300px;
+    width: 30rem;
     height: 100%;
     display: grid;
-    row-gap: 28px;
+    row-gap: 2.8rem;
     grid-template-rows: repeat(4, auto) 1fr;
-    background-color: variables.$color-zinc-950;
+    background-color: variables.$color-aside;
     .personal-infos{
-        @include mixins.flex-default(8px);
+        @include mixins.flex-default(0.8rem);
         align-items: center;
         .profile-image{
             display: flex;
             justify-content: center;
             img{
-                width: 200px;
-                height: 200px;
-                border: solid 4px variables.$color-green-500;
+                width: 20rem;
+                height: 20rem;
+                border: solid 4px variables.$color-emphasis;
                 border-radius: 50%;
             }
         }
         span{
-            @include mixins.font(normal, 16px, variables.$color-zinc-100);
+            @include mixins.font(normal, variables.$font-size-small, variables.$color-light);
         }
     }
     .technological-infos{
         h3{
-            margin-bottom: 8px;
+            margin-bottom: 0.8rem;
         }
         ul{
             @include mixins.box-reset(true);
             @include mixins.list-reset();
             flex-direction: column;
-            gap: 4px;
-            @include mixins.font(normal, 16px, variables.$color-zinc-100);
+            gap: 0.4rem;
+            @include mixins.font(normal, variables.$font-size-small, variables.$color-light);
             i{
                 width: 8%;
             }
         }
     }
     .contacts-infos{
-        @include mixins.flex-default(8px);
+        @include mixins.flex-default(0.8rem);
         a{
             @include mixins.hover-default();
-            @include mixins.font(normal, 16px, variables.$color-zinc-100);
+            @include mixins.font(normal, variables.$font-size-small, variables.$color-light);
             text-decoration: none;
             i{
                 width: 8%;
@@ -54,19 +54,19 @@ aside{
         }
     }
     .line{
-        border: solid 1px variables.$color-zinc-800;
+        border: solid 1px variables.$color-dark;
         width: 100%;
     }
 }
 
 @media only screen and (max-height: 716px){
     aside{
-        row-gap: 20px;
+        row-gap: 2rem;
         .personal-infos{
             .profile-image{
                 img{
-                    width: 160px;
-                    height: 160px;
+                    width: 16rem;
+                    height: 16rem;
                 }
             }
         }
@@ -75,7 +75,7 @@ aside{
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 i{
-                    margin-right: 8px;
+                    margin-right: 0.8rem;
                 }
             }
         }

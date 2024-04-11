@@ -1,22 +1,22 @@
 @use '../resources/variables';
 @use '../resources/mixins';
-
+ 
 header{
-    @include mixins.padding-default(160px, 80px);
-    margin-bottom: 12px;
+    @include mixins.padding-default(16rem, 8rem);
+    margin-bottom: 1.2rem;
     nav{
-        padding-bottom: 24px;
-        padding-top: 24px;
-        border-bottom: solid 2px variables.$color-zinc-800;
+        padding-bottom: 2.4rem;
+        padding-top: 2.4rem;
+        border-bottom: solid 2px variables.$color-dark;
         display: flex;
         justify-content: space-between;
         align-items: center;
         span{
-            @include mixins.font(normal, 20px, variables.$color-zinc-100);
+            @include mixins.font(normal, 2rem, variables.$color-light);
             @include mixins.hover-default();
         }
         p{
-            @include mixins.font(normal, 18px, variables.$color-zinc-100);
+            @include mixins.font(normal, variables.$font-size-normal, variables.$color-light);
             @include mixins.box-reset();
             @include mixins.hover-default();
             display: none;
@@ -24,9 +24,9 @@ header{
         ul{
             @include mixins.list-reset();
             @include mixins.box-reset(true);
-            gap: 40px;
+            gap: 4rem;
             a{
-                @include mixins.font(normal, 18px, variables.$color-zinc-100);
+                @include mixins.font(normal, variables.$font-size-normal, variables.$color-light);
                 @include mixins.hover-default();
                 text-decoration: none;
             }
@@ -36,13 +36,13 @@ header{
 
 @media only screen and (max-width: variables.$breakpoint-large-laptop){
     header{
-        @include mixins.padding-default(80px, 80px);
+        @include mixins.padding-default(8rem, 8rem);
     }
 }
 
 @media only screen and (max-width: variables.$breakpoint-small-laptop){
     header{
-        @include mixins.padding-default(60px, 60px);
+        @include mixins.padding-default(6rem, 6rem);
         nav{
             justify-content: center;
             span{
@@ -58,7 +58,7 @@ header{
 
 @media only screen and (max-width: variables.$breakpoint-tablet){
     header{
-        @include mixins.padding-default(40px, 40px);
+        @include mixins.padding-default(4rem, 4rem);
         nav{
             justify-content: flex-end;
             ul{
@@ -73,8 +73,8 @@ header{
 
 @media only screen and (max-width: variables.$breakpoint-cellphone){
     header{
-        margin-bottom: 8px;
-        @include mixins.padding-default(32px, 32px);
+        margin-bottom: 0.8rem;
+        @include mixins.padding-default(3.2rem, 3.2rem);
         nav{
             justify-content: center;
         }

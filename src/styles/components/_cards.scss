@@ -5,8 +5,8 @@
     @include mixins.flex-default(0px);
     p{
         @include mixins.box-reset();
-        @include mixins.font(normal, 18px, variables.$color-zinc-100);
-        margin-bottom: 20px;
+        @include mixins.font(normal, variables.$font-size-normal, variables.$color-light);
+        margin-bottom: 2rem;
     }
 }
 
@@ -15,10 +15,10 @@
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     .card{
-        @include mixins.flex-default(16px);
-        padding: 28px;
-        border-radius: 12px;
-        border: solid 2px variables.$color-zinc-800;
+        @include mixins.flex-default(1.6rem);
+        padding: 2.8rem;
+        border-radius: 1.2rem;
+        border: solid 2px variables.$color-dark;
         background-color: #27272a45;
         transition: variables.$transition-default;  
         ul{
@@ -27,11 +27,11 @@
             gap: 8px;
             li{
                 @include mixins.li-tag();
-                @include mixins.font(normal, 16px, variables.$color-zinc-100);
+                @include mixins.font(normal, variables.$font-size-small, variables.$color-light);
             }
         }
         &:hover{
-            border: solid 2px variables.$color-green-500;
+            border: solid 2px variables.$color-emphasis;
         }
     }
 }
@@ -44,13 +44,13 @@
 
 @media only screen and (max-width: variables.$breakpoint-tablet){
     .cards{
-        gap: 32px;
+        gap: 3.2rem;
     }
 }
 
 @media only screen and (max-width: variables.$breakpoint-cellphone){
     .cards{
-        gap: 20px;
+        gap: 2rem;
     }
 }
 

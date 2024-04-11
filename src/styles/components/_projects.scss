@@ -4,41 +4,41 @@
 #projects{
     .card{
         p{
-            margin-top: 8px;
+            margin-top: 0.8rem;
             margin-bottom: 0px;
-            @include mixins.font(normal, 16px, variables.$color-zinc-100);
+            @include mixins.font(normal, variables.$font-size-small, variables.$color-light);
         }
         .links{
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 2rem;
             .button{
                 cursor: pointer;
                 letter-spacing: 0.5px;
-                padding: 8px 16px;
-                border-radius: 8px;
-                background-color: variables.$color-zinc-800;
+                padding: 0.8rem 1.6rem;
+                border-radius: 0.8rem;
+                background-color: variables.$color-dark;
                 text-decoration: none;
-                @include mixins.font(normal, 18px, variables.$color-zinc-100);
+                @include mixins.font(normal, variables.$font-size-normal, variables.$color-light);
                 transition: all 500ms ease;
                 &:hover{
-                    background-color: variables.$color-green-500;
-                    color: variables.$color-zinc-800;
+                    background-color: variables.$color-emphasis;
+                    color: variables.$color-dark;
                 }
             }
             .link{
                 @include mixins.underline-link();
-                @include mixins.font(normal, 18px, variables.$color-zinc-100);
+                @include mixins.font(normal, variables.$font-size-normal, variables.$color-light);
                 @include mixins.hover-default();
             }
         }
     }
     span{
         align-self: center;
-        margin-top: 40px;
+        margin-top: 4rem;
         a{
             @include mixins.underline-link();
-            @include mixins.font(normal, 20px, variables.$color-zinc-100);
+            @include mixins.font(normal, variables.$font-size-larger, variables.$color-light);
             @include mixins.hover-default();
         }
     }
@@ -47,7 +47,7 @@
 @media only screen and (max-width: variables.$breakpoint-tablet){
     #projects{
         span{
-            margin-top: 32px;
+            margin-top: 3.2rem;
         }
     }
 }
@@ -55,7 +55,7 @@
 @media only screen and (max-width: variables.$breakpoint-cellphone){
     #projects{
         span{
-            margin-top: 20px;
+            margin-top: 2rem;
         }
     }
 }

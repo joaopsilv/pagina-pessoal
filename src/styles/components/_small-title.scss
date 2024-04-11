@@ -2,6 +2,6 @@
 @use '../resources/mixins';
 
 .small-title{
-    @include mixins.font(bold, 20px, variables.$color-zinc-100);
+    @include mixins.font(bold, variables.$font-size-larger, variables.$color-light);
     @include mixins.box-reset();
 }
